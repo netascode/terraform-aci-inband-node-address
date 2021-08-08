@@ -14,35 +14,37 @@ terraform {
 module "main" {
   source = "../.."
 
-  name        = "ABC"
-  alias       = "ALIAS"
-  description = "DESCR"
+  node_id        = 101
+  pod            = 1
+  address        = "10.1.1.100/24"
+  gateway        = "10.1.1.254"
+  endpoint_group = "INB1"
 }
 
-data "aci_rest" "fvTenant" {
-  dn = "uni/tn-ABC"
+data "aci_rest" "mgmtRsInBStNode" {
+  dn = "uni/tn-mgmt/mgmtp-default/inb-INB1/rsinBStNode-[topology/pod-1/node-101]"
 
   depends_on = [module.main]
 }
 
-resource "test_assertions" "fvTenant" {
-  component = "fvTenant"
+resource "test_assertions" "mgmtRsInBStNode" {
+  component = "mgmtRsInBStNode"
 
-  equal "name" {
-    description = "name"
-    got         = data.aci_rest.fvTenant.content.name
-    want        = "ABC"
+  equal "addr" {
+    description = "addr"
+    got         = data.aci_rest.mgmtRsInBStNode.content.addr
+    want        = "10.1.1.100/24"
   }
 
-  equal "nameAlias" {
-    description = "nameAlias"
-    got         = data.aci_rest.fvTenant.content.nameAlias
-    want        = "ALIAS"
+  equal "gw" {
+    description = "gw"
+    got         = data.aci_rest.mgmtRsInBStNode.content.gw
+    want        = "10.1.1.254"
   }
 
-  equal "descr" {
-    description = "descr"
-    got         = data.aci_rest.fvTenant.content.descr
-    want        = "DESCR"
+  equal "tDn" {
+    description = "tDn"
+    got         = data.aci_rest.mgmtRsInBStNode.content.tDn
+    want        = "topology/pod-1/node-101"
   }
 }
