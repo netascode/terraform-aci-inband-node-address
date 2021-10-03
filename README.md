@@ -13,11 +13,11 @@ Location in GUI:
 ```hcl
 module "aci_inband_node_address" {
   source  = "netascode/inband-node-address/aci"
-  version = ">= 0.0.2"
+  version = ">= 0.0.3"
 
   node_id        = 201
   pod_id         = 2
-  address        = "10.1.1.100/24"
+  ip             = "10.1.1.100/24"
   gateway        = "10.1.1.254"
   endpoint_group = "INB1"
 }
@@ -43,7 +43,7 @@ module "aci_inband_node_address" {
 |------|-------------|------|---------|:--------:|
 | <a name="input_node_id"></a> [node\_id](#input\_node\_id) | Node ID. | `number` | n/a | yes |
 | <a name="input_pod_id"></a> [pod\_id](#input\_pod\_id) | Pod ID. | `number` | `1` | no |
-| <a name="input_address"></a> [address](#input\_address) | Inband IP address. | `string` | n/a | yes |
+| <a name="input_ip"></a> [ip](#input\_ip) | Inband IP address. | `string` | n/a | yes |
 | <a name="input_gateway"></a> [gateway](#input\_gateway) | Inband gateway IP. | `string` | n/a | yes |
 | <a name="input_endpoint_group"></a> [endpoint\_group](#input\_endpoint\_group) | Inband management endpoint group name. | `string` | n/a | yes |
 

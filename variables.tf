@@ -19,7 +19,7 @@ variable "pod_id" {
   }
 }
 
-variable "address" {
+variable "ip" {
   description = "Inband IP address."
   type        = string
 }
