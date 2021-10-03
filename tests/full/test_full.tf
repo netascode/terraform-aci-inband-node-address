@@ -14,15 +14,15 @@ terraform {
 module "main" {
   source = "../.."
 
-  node_id        = 101
-  pod            = 1
+  node_id        = 201
+  pod_id         = 2
   address        = "10.1.1.100/24"
   gateway        = "10.1.1.254"
   endpoint_group = "INB1"
 }
 
 data "aci_rest" "mgmtRsInBStNode" {
-  dn = "uni/tn-mgmt/mgmtp-default/inb-INB1/rsinBStNode-[topology/pod-1/node-101]"
+  dn = "uni/tn-mgmt/mgmtp-default/inb-INB1/rsinBStNode-[topology/pod-2/node-201]"
 
   depends_on = [module.main]
 }
@@ -45,6 +45,6 @@ resource "test_assertions" "mgmtRsInBStNode" {
   equal "tDn" {
     description = "tDn"
     got         = data.aci_rest.mgmtRsInBStNode.content.tDn
-    want        = "topology/pod-1/node-101"
+    want        = "topology/pod-2/node-201"
   }
 }
