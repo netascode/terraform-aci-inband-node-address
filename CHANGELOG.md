@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Update implicit resource dependencies
+
 ## 0.0.3
 
 - BREAKING CHANGE: rename address variable to ip
