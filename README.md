@@ -19,6 +19,8 @@ module "aci_inband_node_address" {
   pod_id         = 2
   ip             = "10.1.1.100/24"
   gateway        = "10.1.1.254"
+  v6_ip          = "2002::2/64"
+  v6_gateway     = "2002::1"
   endpoint_group = "INB1"
 }
 ```
@@ -42,8 +44,10 @@ module "aci_inband_node_address" {
 |------|-------------|------|---------|:--------:|
 | <a name="input_node_id"></a> [node\_id](#input\_node\_id) | Node ID. | `number` | n/a | yes |
 | <a name="input_pod_id"></a> [pod\_id](#input\_pod\_id) | Pod ID. | `number` | `1` | no |
-| <a name="input_ip"></a> [ip](#input\_ip) | Inband IP address. | `string` | n/a | yes |
-| <a name="input_gateway"></a> [gateway](#input\_gateway) | Inband gateway IP. | `string` | n/a | yes |
+| <a name="input_ip"></a> [ip](#input\_ip) | Inband IP address. | `string` | `""` | no |
+| <a name="input_gateway"></a> [gateway](#input\_gateway) | Inband gateway IP. | `string` | `""` | no |
+| <a name="input_v6_ip"></a> [v6\_ip](#input\_v6\_ip) | Inband IPv6 address. | `string` | `""` | no |
+| <a name="input_v6_gateway"></a> [v6\_gateway](#input\_v6\_gateway) | Inband IPv6 gateway IP. | `string` | `""` | no |
 | <a name="input_endpoint_group"></a> [endpoint\_group](#input\_endpoint\_group) | Inband management endpoint group name. | `string` | n/a | yes |
 
 ## Outputs

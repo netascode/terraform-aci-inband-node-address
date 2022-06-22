@@ -20,6 +20,8 @@ module "aci_inband_node_address" {
   pod_id         = 2
   ip             = "10.1.1.100/24"
   gateway        = "10.1.1.254"
+  v6_ip          = "2002::2/64"
+  v6_gateway     = "2002::1"
   endpoint_group = "INB1"
 }
 ```

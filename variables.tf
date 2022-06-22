@@ -22,11 +22,25 @@ variable "pod_id" {
 variable "ip" {
   description = "Inband IP address."
   type        = string
+  default     = ""
 }
 
 variable "gateway" {
   description = "Inband gateway IP."
   type        = string
+  default     = ""
+}
+
+variable "v6_ip" {
+  description = "Inband IPv6 address."
+  type        = string
+  default     = ""
+}
+
+variable "v6_gateway" {
+  description = "Inband IPv6 gateway IP."
+  type        = string
+  default     = ""
 }
 
 variable "endpoint_group" {

@@ -18,6 +18,8 @@ module "main" {
   pod_id         = 2
   ip             = "10.1.1.100/24"
   gateway        = "10.1.1.254"
+  v6_ip          = "2002::2/64"
+  v6_gateway     = "2002::1"
   endpoint_group = "INB1"
 }
 
@@ -40,6 +42,18 @@ resource "test_assertions" "mgmtRsInBStNode" {
     description = "gw"
     got         = data.aci_rest_managed.mgmtRsInBStNode.content.gw
     want        = "10.1.1.254"
+  }
+
+  equal "v6Addr" {
+    description = "v6Addr"
+    got         = data.aci_rest_managed.mgmtRsInBStNode.content.v6Addr
+    want        = "2002::2/64"
+  }
+
+  equal "v6Gw" {
+    description = "v6Gw"
+    got         = data.aci_rest_managed.mgmtRsInBStNode.content.v6Gw
+    want        = "2002::1"
   }
 
   equal "tDn" {
