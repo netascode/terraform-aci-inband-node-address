@@ -1,3 +1,7 @@
+## 0.1.2 (unreleased)
+
+- Fix unintended deletion of inband EPG when module is destroyed
+
 ## 0.1.1
 
 - Add support for v6 addresses

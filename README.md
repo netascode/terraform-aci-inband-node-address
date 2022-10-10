@@ -60,6 +60,6 @@ module "aci_inband_node_address" {
 
 | Name | Type |
 |------|------|
-| [aci_rest_managed.mgmtInB](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
+| [aci_rest.mgmtInB](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest) | resource |
 | [aci_rest_managed.mgmtRsInBStNode](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
 <!-- END_TF_DOCS -->
