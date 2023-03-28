@@ -52,3 +52,13 @@ variable "endpoint_group" {
     error_message = "Allowed characters: `a`-`z`, `A`-`Z`, `0`-`9`, `_`, `.`, `-`. Maximum characters: 64."
   }
 }
+
+variable "endpoint_group_vlan" {
+  description = "Inband management endpoint group vlan."
+  type        = number
+
+  validation {
+    condition     = var.endpoint_group_vlan >= 1 && var.endpoint_group_vlan <= 4094
+    error_message = "Minimum value: 1. Maximum value: 4094."
+  }
+}

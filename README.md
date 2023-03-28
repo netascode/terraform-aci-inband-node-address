@@ -49,6 +49,7 @@ module "aci_inband_node_address" {
 | <a name="input_v6_ip"></a> [v6\_ip](#input\_v6\_ip) | Inband IPv6 address. | `string` | `""` | no |
 | <a name="input_v6_gateway"></a> [v6\_gateway](#input\_v6\_gateway) | Inband IPv6 gateway IP. | `string` | `""` | no |
 | <a name="input_endpoint_group"></a> [endpoint\_group](#input\_endpoint\_group) | Inband management endpoint group name. | `string` | n/a | yes |
+| <a name="input_endpoint_group_vlan"></a> [endpoint\_group\_vlan](#input\_endpoint\_group\_vlan) | Inband management endpoint group vlan. | `number` | n/a | yes |
 
 ## Outputs
 

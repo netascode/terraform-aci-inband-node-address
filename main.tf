@@ -9,7 +9,8 @@ resource "aci_rest" "mgmtInB" {
           {
             "mgmtInB": {
               "attributes": {
-                "name": "${var.endpoint_group}"
+                "name": "${var.endpoint_group}",
+                "encap": "vlan-${var.endpoint_group_vlan}"
               }
             }
           }

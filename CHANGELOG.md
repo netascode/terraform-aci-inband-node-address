@@ -1,3 +1,7 @@
+## 0.2.0 (unreleased)
+
+- BREAKING CHANGE: Add `endpoint_group_vlan` attribute which is required for ACI 6.0+
+
 ## 0.1.3
 
 - Allow pod ID 0 for standalone APICs
