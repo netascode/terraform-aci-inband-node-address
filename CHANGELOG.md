@@ -1,4 +1,4 @@
-## 0.2.0 (unreleased)
+## 0.2.0
 
 - BREAKING CHANGE: Add `endpoint_group_vlan` attribute which is required for ACI 6.0+
 
