@@ -15,14 +15,13 @@ module "aci_inband_node_address" {
   source  = "netascode/inband-node-address/aci"
   version = ">= 0.2.0"
 
-  node_id             = 201
-  pod_id              = 2
-  ip                  = "10.1.1.100/24"
-  gateway             = "10.1.1.254"
-  v6_ip               = "2002::2/64"
-  v6_gateway          = "2002::1"
-  endpoint_group      = "INB1"
-  endpoint_group_vlan = 4
+  node_id        = 201
+  pod_id         = 2
+  ip             = "10.1.1.100/24"
+  gateway        = "10.1.1.254"
+  v6_ip          = "2002::2/64"
+  v6_gateway     = "2002::1"
+  endpoint_group = "INB1"
 }
 ```
 
@@ -50,7 +49,6 @@ module "aci_inband_node_address" {
 | <a name="input_v6_ip"></a> [v6\_ip](#input\_v6\_ip) | Inband IPv6 address. | `string` | `""` | no |
 | <a name="input_v6_gateway"></a> [v6\_gateway](#input\_v6\_gateway) | Inband IPv6 gateway IP. | `string` | `""` | no |
 | <a name="input_endpoint_group"></a> [endpoint\_group](#input\_endpoint\_group) | Inband management endpoint group name. | `string` | n/a | yes |
-| <a name="input_endpoint_group_vlan"></a> [endpoint\_group\_vlan](#input\_endpoint\_group\_vlan) | Inband management endpoint group vlan. | `number` | n/a | yes |
 
 ## Outputs
 
@@ -62,6 +60,5 @@ module "aci_inband_node_address" {
 
 | Name | Type |
 |------|------|
-| [aci_rest.mgmtInB](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest) | resource |
 | [aci_rest_managed.mgmtRsInBStNode](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
 <!-- END_TF_DOCS -->

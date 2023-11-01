@@ -1,3 +1,8 @@
+## 0.2.1 (unreleased)
+
+- Do not create the inband EPG as it overlaps with the `terraform-aci-inband-endpoint-group` module
+- Remove `endpoint_group_vlan` attribute as it is no longer required by this module 
+
 ## 0.2.0
 
 - BREAKING CHANGE: Add `endpoint_group_vlan` attribute which is required for ACI 6.0+

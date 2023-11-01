@@ -16,10 +16,9 @@ terraform {
 module "main" {
   source = "../.."
 
-  node_id             = 201
-  pod_id              = 2
-  endpoint_group      = "INB1"
-  endpoint_group_vlan = 104
+  node_id        = 201
+  pod_id         = 2
+  endpoint_group = "INB1"
 }
 
 data "aci_rest_managed" "mgmtRsInBStNode" {
